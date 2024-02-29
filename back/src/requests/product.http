@@ -1,0 +1,45 @@
+### Default URL
+GET http://localhost:5000/api/
+
+### Get all products
+GET http://localhost:5000/api/products
+
+### Get a product by id
+GET http://localhost:5000/api/products/1015
+
+### Post a new product
+POST http://localhost:5000/api/products
+Content-Type: application/json
+
+{
+   "id": 1015,
+    "code": "vb34btbg5",
+    "name": "Light Green T-Shirt",
+    "description": "Product Description",
+    "image": "light-green-t-shirt.jpg",
+    "price": 49,
+    "category": "Clothing",
+    "quantity": 34,
+    "inventoryStatus": "INSTOCK",
+    "rating": 4
+}
+
+### Update a existing product
+PUT http://localhost:5000/api/products/1000
+Content-Type: application/json
+
+{
+    "id": "1000",
+    "code": "f230fh0g3",
+    "name": "Bamboo Watchh",
+    "description": "Product Description",
+    "price": 65,
+    "quantity": 24,
+    "inventoryStatus": "INSTOCK",
+    "category": "Accessories",
+    "image": "bamboo-watch.jpg",
+    "rating": 5
+}
+
+### // Remove an existing product
+DELETE http://localhost:5000/api/products/1006
